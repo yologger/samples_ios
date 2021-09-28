@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Create View Controller-->
+        <scene sceneID="gAf-mc-r47">
+            <objects>
+                <viewController storyboardIdentifier="CreateViewController" id="JSJ-cE-srG" customClass="CreateViewController" customModule="simple_memo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="QgX-Ok-uXt">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rVR-xd-2I1">
+                                <rect key="frame" x="0.0" y="44" width="414" height="62"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wpr-iI-5Ey">
+                                        <rect key="frame" x="16" y="16" width="39" height="30"/>
+                                        <state key="normal" title="Close"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cBq-55-HL6">
+                                        <rect key="frame" x="364" y="16" width="34" height="30"/>
+                                        <state key="normal" title="Save"/>
+                                        <connections>
+                                            <action selector="save:" destination="JSJ-cE-srG" eventType="touchUpInside" id="Aix-ZU-CVu"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="Wpr-iI-5Ey" firstAttribute="top" secondItem="rVR-xd-2I1" secondAttribute="top" constant="16" id="8gJ-0N-A9t"/>
+                                    <constraint firstAttribute="bottom" secondItem="Wpr-iI-5Ey" secondAttribute="bottom" constant="16" id="9a9-ri-yZe"/>
+                                    <constraint firstAttribute="trailing" secondItem="cBq-55-HL6" secondAttribute="trailing" constant="16" id="KHD-zY-fvo"/>
+                                    <constraint firstItem="Wpr-iI-5Ey" firstAttribute="leading" secondItem="rVR-xd-2I1" secondAttribute="leading" constant="16" id="RHT-rJ-v17"/>
+                                    <constraint firstAttribute="bottom" secondItem="cBq-55-HL6" secondAttribute="bottom" constant="16" id="cT6-pJ-ulq"/>
+                                    <constraint firstItem="cBq-55-HL6" firstAttribute="top" secondItem="rVR-xd-2I1" secondAttribute="top" constant="16" id="cbi-iQ-epp"/>
+                                </constraints>
+                            </view>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Title" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Xqt-uQ-J6c">
+                                <rect key="frame" x="0.0" y="106" width="414" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="QZr-Go-DeZ">
+                                <rect key="frame" x="0.0" y="140" width="414" height="722"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="g7A-fR-eGs"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Xqt-uQ-J6c" firstAttribute="top" secondItem="rVR-xd-2I1" secondAttribute="bottom" id="E4S-sD-fvg"/>
+                            <constraint firstItem="g7A-fR-eGs" firstAttribute="trailing" secondItem="Xqt-uQ-J6c" secondAttribute="trailing" id="Enn-a6-wdh"/>
+                            <constraint firstItem="QZr-Go-DeZ" firstAttribute="leading" secondItem="g7A-fR-eGs" secondAttribute="leading" id="Rax-fY-QdM"/>
+                            <constraint firstItem="g7A-fR-eGs" firstAttribute="bottom" secondItem="QZr-Go-DeZ" secondAttribute="bottom" id="RyC-8A-JLN"/>
+                            <constraint firstItem="Xqt-uQ-J6c" firstAttribute="leading" secondItem="g7A-fR-eGs" secondAttribute="leading" id="TgS-b9-9wj"/>
+                            <constraint firstItem="g7A-fR-eGs" firstAttribute="trailing" secondItem="QZr-Go-DeZ" secondAttribute="trailing" id="gHL-fF-lxp"/>
+                            <constraint firstItem="rVR-xd-2I1" firstAttribute="leading" secondItem="g7A-fR-eGs" secondAttribute="leading" id="kXl-bf-dwL"/>
+                            <constraint firstItem="g7A-fR-eGs" firstAttribute="trailing" secondItem="rVR-xd-2I1" secondAttribute="trailing" id="nRc-OX-F5m"/>
+                            <constraint firstItem="rVR-xd-2I1" firstAttribute="top" secondItem="g7A-fR-eGs" secondAttribute="top" id="oi7-lQ-6d4"/>
+                            <constraint firstItem="QZr-Go-DeZ" firstAttribute="top" secondItem="Xqt-uQ-J6c" secondAttribute="bottom" id="vTd-Uh-8Wg"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="buttonClose" destination="Wpr-iI-5Ey" id="G3H-tq-qaY"/>
+                        <outlet property="buttonSave" destination="cBq-55-HL6" id="4a7-a2-TQh"/>
+                        <outlet property="navigationBar" destination="rVR-xd-2I1" id="d9r-6s-vXS"/>
+                        <outlet property="textFieldTitle" destination="Xqt-uQ-J6c" id="wRP-JV-dZb"/>
+                        <outlet property="textViewContent" destination="QZr-Go-DeZ" id="T4v-a4-irf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cJQ-2E-5lA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="174" y="175"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

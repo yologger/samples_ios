@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="camera_example" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IKl-jr-aUp">
+                                <rect key="frame" x="0.0" y="44" width="414" height="100"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="150" translatesAutoresizingMaskIntoConstraints="NO" id="RUi-vz-QZ3">
+                                        <rect key="frame" x="81" y="35" width="252" height="30"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cHF-Kk-Mqi" userLabel="Gallery Button">
+                                                <rect key="frame" x="0.0" y="0.0" width="48" height="30"/>
+                                                <state key="normal" title="Gallery"/>
+                                                <connections>
+                                                    <action selector="openGallery:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lw9-fa-ujS"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Pf-bb-mLs" userLabel="Camera Button">
+                                                <rect key="frame" x="198" y="0.0" width="54" height="30"/>
+                                                <state key="normal" title="Camera"/>
+                                                <connections>
+                                                    <action selector="openCamera:" destination="BYZ-38-t0r" eventType="touchUpInside" id="M0U-bp-whv"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="RUi-vz-QZ3" firstAttribute="centerY" secondItem="IKl-jr-aUp" secondAttribute="centerY" id="88W-L3-hpB"/>
+                                    <constraint firstAttribute="height" constant="100" id="dbZ-HA-WnT"/>
+                                    <constraint firstItem="RUi-vz-QZ3" firstAttribute="centerX" secondItem="IKl-jr-aUp" secondAttribute="centerX" id="jiD-ip-NDf"/>
+                                </constraints>
+                            </view>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="YN0-Nt-aX7">
+                                <rect key="frame" x="0.0" y="144" width="414" height="718"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="YN0-Nt-aX7" firstAttribute="top" secondItem="IKl-jr-aUp" secondAttribute="bottom" id="3cS-Be-XE8"/>
+                            <constraint firstItem="IKl-jr-aUp" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="47Y-6T-x09"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="IKl-jr-aUp" secondAttribute="trailing" id="DCH-42-ljy"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="YN0-Nt-aX7" secondAttribute="bottom" id="Lx0-cD-tyn"/>
+                            <constraint firstItem="IKl-jr-aUp" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="qiy-Ay-s3Z"/>
+                            <constraint firstItem="YN0-Nt-aX7" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="uwa-Iw-8vy"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="YN0-Nt-aX7" secondAttribute="trailing" id="vFD-nT-7gE"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="YN0-Nt-aX7" id="Byp-gv-FjC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="139" y="139"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

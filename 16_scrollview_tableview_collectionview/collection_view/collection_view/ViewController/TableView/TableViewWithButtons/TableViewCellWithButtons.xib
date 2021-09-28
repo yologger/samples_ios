@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="TableViewCellWithButtons" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="TableViewCellWithButtons" rowHeight="152" id="hzk-8d-DIf" customClass="TableViewCellWithButtons" customModule="collection_view" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="518" height="152"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="hzk-8d-DIf" id="a68-IS-KYr">
+                <rect key="frame" x="0.0" y="0.0" width="518" height="152"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="V6L-vv-KKz">
+                        <rect key="frame" x="16" y="16" width="42.5" height="120"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="id" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M1w-Nh-OKy">
+                                <rect key="frame" x="0.0" y="0.0" width="14" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ClK-EX-yWu">
+                                <rect key="frame" x="0.0" y="99.5" width="42.5" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                    </stackView>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Fv-hB-hXc">
+                        <rect key="frame" x="458" y="61" width="44" height="30"/>
+                        <state key="normal" title="INDEX"/>
+                        <connections>
+                            <action selector="onIndex:" destination="hzk-8d-DIf" eventType="touchUpInside" id="2h8-PK-idn"/>
+                        </connections>
+                    </button>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="io3-Kd-rdz">
+                        <rect key="frame" x="387" y="61" width="55" height="30"/>
+                        <state key="normal" title="DELETE"/>
+                        <connections>
+                            <action selector="onDelete:" destination="hzk-8d-DIf" eventType="touchUpInside" id="tEg-6k-A7g"/>
+                        </connections>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="io3-Kd-rdz" firstAttribute="centerY" secondItem="a68-IS-KYr" secondAttribute="centerY" id="4Oi-sE-OLF"/>
+                    <constraint firstItem="6Fv-hB-hXc" firstAttribute="centerY" secondItem="a68-IS-KYr" secondAttribute="centerY" id="4SX-PL-zqz"/>
+                    <constraint firstItem="V6L-vv-KKz" firstAttribute="top" secondItem="a68-IS-KYr" secondAttribute="top" constant="16" id="R78-Ea-1jR"/>
+                    <constraint firstItem="V6L-vv-KKz" firstAttribute="leading" secondItem="a68-IS-KYr" secondAttribute="leading" constant="16" id="dAK-tf-MWz"/>
+                    <constraint firstItem="6Fv-hB-hXc" firstAttribute="leading" secondItem="io3-Kd-rdz" secondAttribute="trailing" constant="16" id="iI3-jS-Ddq"/>
+                    <constraint firstAttribute="bottom" secondItem="V6L-vv-KKz" secondAttribute="bottom" constant="16" id="pIj-Sz-R8i"/>
+                    <constraint firstAttribute="trailing" secondItem="6Fv-hB-hXc" secondAttribute="trailing" constant="16" id="qPA-Yp-m5I"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="idLabel" destination="M1w-Nh-OKy" id="ffM-en-Lj8"/>
+                <outlet property="nameLabel" destination="ClK-EX-yWu" id="Aoe-AA-ng5"/>
+            </connections>
+            <point key="canvasLocation" x="-59" y="85"/>
+        </tableViewCell>
+    </objects>
+</document>

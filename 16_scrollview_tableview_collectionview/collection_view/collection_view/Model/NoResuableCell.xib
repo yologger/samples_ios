@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="NoResuableCell" id="P4p-6E-yVM" customClass="NoResuableCell" customModule="collection_view" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="423" height="110"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="DG2-3Q-JMK">
+                <rect key="frame" x="0.0" y="0.0" width="423" height="110"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pK3-2q-wAv">
+                        <rect key="frame" x="26" y="31" width="42" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6l4-iP-ygG">
+                        <rect key="frame" x="26" y="60" width="42" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UQT-6D-sr0">
+                        <rect key="frame" x="315" y="40" width="46" height="30"/>
+                        <state key="normal" title="Button"/>
+                    </button>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qbM-rj-7pF">
+                        <rect key="frame" x="369" y="40" width="46" height="30"/>
+                        <state key="normal" title="Button"/>
+                    </button>
+                </subviews>
+                <color key="backgroundColor" red="0.80216149619999999" green="1" blue="0.53918085419999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                <constraints>
+                    <constraint firstItem="pK3-2q-wAv" firstAttribute="leading" secondItem="DG2-3Q-JMK" secondAttribute="leading" constant="8" id="0ge-uX-wDb"/>
+                    <constraint firstItem="pK3-2q-wAv" firstAttribute="top" secondItem="DG2-3Q-JMK" secondAttribute="top" constant="8" id="7vi-bE-Nen"/>
+                    <constraint firstAttribute="trailing" secondItem="qbM-rj-7pF" secondAttribute="trailing" constant="8" id="JPq-Bf-CDC"/>
+                    <constraint firstItem="qbM-rj-7pF" firstAttribute="centerY" secondItem="DG2-3Q-JMK" secondAttribute="centerY" id="Oaa-y3-LBg"/>
+                    <constraint firstItem="6l4-iP-ygG" firstAttribute="top" secondItem="pK3-2q-wAv" secondAttribute="bottom" constant="8" id="TpD-q7-9S3"/>
+                    <constraint firstItem="6l4-iP-ygG" firstAttribute="leading" secondItem="DG2-3Q-JMK" secondAttribute="leading" constant="8" id="fEL-lV-UvE"/>
+                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="6l4-iP-ygG" secondAttribute="bottom" constant="8" id="ncF-JX-kBZ"/>
+                    <constraint firstItem="qbM-rj-7pF" firstAttribute="leading" secondItem="UQT-6D-sr0" secondAttribute="trailing" constant="8" id="rEp-0O-H7s"/>
+                    <constraint firstItem="UQT-6D-sr0" firstAttribute="centerY" secondItem="DG2-3Q-JMK" secondAttribute="centerY" id="wr3-Ke-Nvc"/>
+                </constraints>
+            </collectionViewCellContentView>
+            <size key="customSize" width="423" height="110"/>
+            <point key="canvasLocation" x="-336" y="-25"/>
+        </collectionViewCell>
+    </objects>
+</document>

@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Main View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="MainViewController" customModule="userdefaults" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="ogh-lR-NDj">
+                                <rect key="frame" x="122.5" y="398" width="169" height="100.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MainViewController" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sv4-RS-pG0">
+                                        <rect key="frame" x="10.5" y="0.0" width="148.5" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7r1-Tv-0kf">
+                                        <rect key="frame" x="0.0" y="70.5" width="169" height="30"/>
+                                        <state key="normal" title="Go to SubViewController"/>
+                                        <connections>
+                                            <segue destination="6xz-Zg-Z0v" kind="presentation" id="siJ-14-1qS"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="ogh-lR-NDj" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="T81-MY-suz"/>
+                            <constraint firstItem="ogh-lR-NDj" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="cyx-Q9-pMu"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="141" y="139"/>
+        </scene>
+        <!--Sub View Controller-->
+        <scene sceneID="OtF-ZY-CUp">
+            <objects>
+                <viewController id="6xz-Zg-Z0v" customClass="SubViewController" customModule="userdefaults" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="a7r-ao-nwb">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="d2m-YI-Yv8">
+                                <rect key="frame" x="136" y="370.5" width="142" height="101.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SubViewController" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EMY-ao-nE4">
+                                        <rect key="frame" x="0.0" y="0.0" width="142" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="6uv-qn-ivT">
+                                        <rect key="frame" x="14" y="70.5" width="114" height="31"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Alarm" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aRA-1O-nW7">
+                                                <rect key="frame" x="0.0" y="5" width="45" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DHv-N8-kab">
+                                                <rect key="frame" x="65" y="0.0" width="51" height="31"/>
+                                                <connections>
+                                                    <action selector="didSwitchChange:" destination="6xz-Zg-Z0v" eventType="valueChanged" id="45h-S2-xkb"/>
+                                                </connections>
+                                            </switch>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kjL-X1-ZmT">
+                                <rect key="frame" x="359" y="16" width="39" height="30"/>
+                                <state key="normal" title="Close"/>
+                                <connections>
+                                    <action selector="onCloseButtonClicked:" destination="6xz-Zg-Z0v" eventType="touchUpInside" id="Ws9-AX-jki"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="kjL-X1-ZmT" firstAttribute="top" secondItem="5KJ-Ae-gh0" secondAttribute="top" constant="16" id="Fgw-8I-bjF"/>
+                            <constraint firstItem="5KJ-Ae-gh0" firstAttribute="trailing" secondItem="kjL-X1-ZmT" secondAttribute="trailing" constant="16" id="Hk6-bz-W0a"/>
+                            <constraint firstItem="d2m-YI-Yv8" firstAttribute="centerY" secondItem="a7r-ao-nwb" secondAttribute="centerY" id="gdG-oN-zdY"/>
+                            <constraint firstItem="d2m-YI-Yv8" firstAttribute="centerX" secondItem="a7r-ao-nwb" secondAttribute="centerX" id="nm5-DJ-smB"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="5KJ-Ae-gh0"/>
+                    </view>
+                    <connections>
+                        <outlet property="alarmSwitch" destination="DHv-N8-kab" id="2Q2-WP-gtX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7Nv-Xc-XyW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="887" y="139"/>
+        </scene>
+    </scenes>
+</document>

@@ -1,0 +1,11 @@
+{
+  "commitish" : "2.1.3",
+  "iOS" : [
+    {
+      "hash" : "d0c330d3ba47169881ae4fc8960d4df1de20f2f25068e290dff408618796148b",
+      "name" : "TLPhotoPicker",
+      "linking" : "dynamic",
+      "swiftToolchainVersion" : "5.3.1 (swiftlang-1200.0.41 clang-1200.0.32.8)"
+    }
+  ]
+}

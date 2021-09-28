@@ -1,0 +1,3 @@
+github "tilltue/TLPhotoPicker"
+github "zvonicek/ImageSlideshow" ~> 1.9.0
+github "Alamofire/Alamofire" ~> 5.2

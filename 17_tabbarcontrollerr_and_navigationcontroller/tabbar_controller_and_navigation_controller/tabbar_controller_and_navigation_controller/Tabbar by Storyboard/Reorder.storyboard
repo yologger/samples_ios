@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Reorder View Controller-->
+        <scene sceneID="NsB-Dy-wlA">
+            <objects>
+                <viewController storyboardIdentifier="ReorderViewController" id="koC-dy-NxE" customClass="ReorderViewController" customModule="simple_memo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="BeF-UO-E7i">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lmN-kh-eDV">
+                                <rect key="frame" x="0.0" y="44" width="414" height="62"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pee-p0-zj6">
+                                        <rect key="frame" x="364" y="16" width="34" height="30"/>
+                                        <state key="normal" title="Save"/>
+                                        <connections>
+                                            <action selector="onSave:" destination="koC-dy-NxE" eventType="touchUpInside" id="gZ9-ie-orf"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W1C-rF-tbN">
+                                        <rect key="frame" x="16" y="16" width="48" height="30"/>
+                                        <state key="normal" title="Cancel"/>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="Pee-p0-zj6" secondAttribute="bottom" constant="16" id="4xC-xu-CHZ"/>
+                                    <constraint firstItem="W1C-rF-tbN" firstAttribute="leading" secondItem="lmN-kh-eDV" secondAttribute="leading" constant="16" id="FNs-V3-Fic"/>
+                                    <constraint firstItem="W1C-rF-tbN" firstAttribute="top" secondItem="lmN-kh-eDV" secondAttribute="top" constant="16" id="LUB-SH-uix"/>
+                                    <constraint firstItem="Pee-p0-zj6" firstAttribute="top" secondItem="lmN-kh-eDV" secondAttribute="top" constant="16" id="Psb-9r-zbN"/>
+                                    <constraint firstAttribute="trailing" secondItem="Pee-p0-zj6" secondAttribute="trailing" constant="16" id="gF5-na-vg3"/>
+                                    <constraint firstAttribute="bottom" secondItem="W1C-rF-tbN" secondAttribute="bottom" constant="16" id="pAl-co-As2"/>
+                                </constraints>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="wwc-DR-n3G">
+                                <rect key="frame" x="0.0" y="106" width="414" height="756"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <view key="tableFooterView" contentMode="scaleToFill" id="Qa4-Oe-SAj">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                </view>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="CvN-or-NDa"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="wwc-DR-n3G" firstAttribute="top" secondItem="lmN-kh-eDV" secondAttribute="bottom" id="6yM-Ve-Baj"/>
+                            <constraint firstItem="lmN-kh-eDV" firstAttribute="leading" secondItem="CvN-or-NDa" secondAttribute="leading" id="BNG-Vj-ElU"/>
+                            <constraint firstItem="CvN-or-NDa" firstAttribute="trailing" secondItem="wwc-DR-n3G" secondAttribute="trailing" id="BVg-Ur-n2k"/>
+                            <constraint firstItem="CvN-or-NDa" firstAttribute="trailing" secondItem="lmN-kh-eDV" secondAttribute="trailing" id="DOD-DS-2av"/>
+                            <constraint firstItem="CvN-or-NDa" firstAttribute="bottom" secondItem="wwc-DR-n3G" secondAttribute="bottom" id="JCH-Qn-OSx"/>
+                            <constraint firstItem="lmN-kh-eDV" firstAttribute="top" secondItem="CvN-or-NDa" secondAttribute="top" id="eb8-GQ-6bJ"/>
+                            <constraint firstItem="wwc-DR-n3G" firstAttribute="leading" secondItem="CvN-or-NDa" secondAttribute="leading" id="yvv-EB-RRC"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="buttonClose" destination="W1C-rF-tbN" id="re3-5Q-HUq"/>
+                        <outlet property="buttonSave" destination="Pee-p0-zj6" id="8K9-hg-byO"/>
+                        <outlet property="tableView" destination="wwc-DR-n3G" id="LW4-bn-0Yp"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Dpx-gh-yVw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-501" y="-63"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

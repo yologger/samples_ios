@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina3_5" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Main View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="MainViewController" customModule="certificate_and_dynamic_font" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Uya-LG-PjM">
+                                <rect key="frame" x="20" y="40.5" width="280" height="399"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="certificate_template.png" translatesAutoresizingMaskIntoConstraints="NO" id="XNc-gU-GDM">
+                                        <rect key="frame" x="0.0" y="0.0" width="280" height="399"/>
+                                        <color key="backgroundColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="XNc-gU-GDM" secondAttribute="height" multiplier="1009:1438" id="cRx-r2-D6S"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="공인인증서" textAlignment="center" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="gJ9-kQ-RYa">
+                                        <rect key="frame" x="98" y="0.0" width="84" height="139.5"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="29"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstItem="gJ9-kQ-RYa" firstAttribute="bottom" secondItem="XNc-gU-GDM" secondAttribute="bottom" multiplier="0.35" id="88i-0F-aMC"/>
+                                    <constraint firstItem="XNc-gU-GDM" firstAttribute="top" secondItem="Uya-LG-PjM" secondAttribute="top" id="O97-qf-ks7"/>
+                                    <constraint firstAttribute="bottom" secondItem="XNc-gU-GDM" secondAttribute="bottom" id="amx-gm-NN6"/>
+                                    <constraint firstItem="gJ9-kQ-RYa" firstAttribute="centerX" secondItem="XNc-gU-GDM" secondAttribute="centerX" id="cIJ-Vk-f2f"/>
+                                    <constraint firstItem="gJ9-kQ-RYa" firstAttribute="top" secondItem="XNc-gU-GDM" secondAttribute="top" id="iPY-R1-PYt"/>
+                                    <constraint firstAttribute="trailing" secondItem="XNc-gU-GDM" secondAttribute="trailing" id="nV5-rW-ATz"/>
+                                    <constraint firstItem="gJ9-kQ-RYa" firstAttribute="width" secondItem="XNc-gU-GDM" secondAttribute="width" multiplier="0.3" id="skI-gu-jZz"/>
+                                    <constraint firstItem="XNc-gU-GDM" firstAttribute="leading" secondItem="Uya-LG-PjM" secondAttribute="leading" id="wd5-tH-ZY3"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Uya-LG-PjM" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Irm-Zr-3OU"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Uya-LG-PjM" secondAttribute="trailing" constant="20" id="cMA-xf-orS"/>
+                            <constraint firstItem="Uya-LG-PjM" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="fHW-d1-GvG"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="131.8840579710145" y="138.61607142857142"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="certificate_template.png" width="1009" height="1438"/>
+    </resources>
+</document>

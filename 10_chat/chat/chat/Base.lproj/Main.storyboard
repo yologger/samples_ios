@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="chat" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" keyboardDismissMode="onDrag" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="BUt-J3-S5F">
+                                <rect key="frame" x="0.0" y="44" width="414" height="770"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="dZn-Nh-mAN"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="LE2-55-9jx"/>
+                                </connections>
+                            </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="egW-qJ-uqJ">
+                                <rect key="frame" x="0.0" y="814" width="414" height="48"/>
+                                <subviews>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Qgx-ZF-1I6">
+                                        <rect key="frame" x="4" y="4" width="330" height="40"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="EwH-z9-Ohw"/>
+                                        </constraints>
+                                        <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gmr-Dj-Fak">
+                                        <rect key="frame" x="338" y="0.0" width="76" height="48"/>
+                                        <inset key="contentEdgeInsets" minX="20" minY="0.0" maxX="20" maxY="0.0"/>
+                                        <state key="normal" title="Send"/>
+                                        <connections>
+                                            <action selector="sendMessage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="IPv-QJ-bD7"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="Qgx-ZF-1I6" firstAttribute="leading" secondItem="egW-qJ-uqJ" secondAttribute="leading" constant="4" id="8rY-PI-vMg"/>
+                                    <constraint firstItem="Gmr-Dj-Fak" firstAttribute="leading" secondItem="Qgx-ZF-1I6" secondAttribute="trailing" constant="4" id="C7b-G9-aLe"/>
+                                    <constraint firstItem="Qgx-ZF-1I6" firstAttribute="top" secondItem="egW-qJ-uqJ" secondAttribute="top" constant="4" id="C8U-LU-bOa"/>
+                                    <constraint firstAttribute="bottom" secondItem="Gmr-Dj-Fak" secondAttribute="bottom" id="IOL-Dr-q2A"/>
+                                    <constraint firstAttribute="bottom" secondItem="Qgx-ZF-1I6" secondAttribute="bottom" constant="4" id="QuE-KT-rre"/>
+                                    <constraint firstItem="Gmr-Dj-Fak" firstAttribute="top" secondItem="egW-qJ-uqJ" secondAttribute="top" id="YCx-Qv-8mG"/>
+                                    <constraint firstAttribute="trailing" secondItem="Gmr-Dj-Fak" secondAttribute="trailing" id="fd3-Zv-ayb"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="egW-qJ-uqJ" secondAttribute="bottom" id="1ME-3C-s64"/>
+                            <constraint firstItem="egW-qJ-uqJ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="GJ8-nM-eag"/>
+                            <constraint firstItem="BUt-J3-S5F" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Gw7-F9-BMw"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="egW-qJ-uqJ" secondAttribute="trailing" id="NNr-OZ-K93"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="BUt-J3-S5F" secondAttribute="trailing" id="Q9f-4E-ozQ"/>
+                            <constraint firstItem="egW-qJ-uqJ" firstAttribute="top" secondItem="BUt-J3-S5F" secondAttribute="bottom" id="Rhk-HS-YtX"/>
+                            <constraint firstItem="BUt-J3-S5F" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="f8q-sn-tgl"/>
+                            <constraint firstItem="egW-qJ-uqJ" firstAttribute="top" secondItem="BUt-J3-S5F" secondAttribute="bottom" id="haO-fK-3rT"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="inputTextView" destination="Qgx-ZF-1I6" id="bt1-9H-z1J"/>
+                        <outlet property="inputViewBottomMargin" destination="1ME-3C-s64" id="VH3-Gv-ByQ"/>
+                        <outlet property="tableView" destination="BUt-J3-S5F" id="W8J-gm-KTC"/>
+                        <outlet property="textViewHeight" destination="EwH-z9-Ohw" id="jH3-RP-hSj"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="131.8840579710145" y="138.61607142857142"/>
+        </scene>
+    </scenes>
+</document>
