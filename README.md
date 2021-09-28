@@ -1,2 +1,2 @@
 # samples-ios
-A collection of samples for iOS
+A collection of personal samples for iOS
